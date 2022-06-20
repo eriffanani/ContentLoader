@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_default_content_loader">#282828</color>
+    <color name="color_line_content_loader">#323232</color>
+</resources>

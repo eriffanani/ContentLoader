@@ -7,7 +7,7 @@
     android:layout_margin="5dp">
 
     <com.erif.contentloader.ContentLoaderView
-        style="@style/Loader.Rounded.XXLarge"
+        style="@style/Loader.Square.XXLarge"
         android:layout_width="110dp"/>
 
     <com.erif.contentloader.ContentLoaderView
