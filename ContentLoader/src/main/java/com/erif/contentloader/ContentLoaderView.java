@@ -12,7 +12,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
-public class LoaderView extends View {
+public class ContentLoaderView extends View {
 
     private Paint paint;
     private RectF rectF;
@@ -25,22 +25,22 @@ public class LoaderView extends View {
     private Path path;
     private float[] corners = new float[]{};
 
-    public LoaderView(Context context) {
+    public ContentLoaderView(Context context) {
         super(context);
         init(context, null, 0, 0);
     }
 
-    public LoaderView(Context context, @Nullable AttributeSet attrs) {
+    public ContentLoaderView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0, 0);
     }
 
-    public LoaderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ContentLoaderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr, 0);
     }
 
-    public LoaderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ContentLoaderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr, defStyleRes);
     }
@@ -53,18 +53,18 @@ public class LoaderView extends View {
         path = new Path();
         if (attrs != null) {
             TypedArray typedArray = context.getTheme().obtainStyledAttributes(
-                    attrs, R.styleable.LoaderView, defStyleAttr, defStyleRes
+                    attrs, R.styleable.ContentLoaderView, defStyleAttr, defStyleRes
             );
             try {
-                type = typedArray.getInt(R.styleable.LoaderView_viewShape, SQUARE);
-                float cornerRadius = typedArray.getDimension(R.styleable.LoaderView_cornerRadius, 0f);
+                type = typedArray.getInt(R.styleable.ContentLoaderView_viewShape, SQUARE);
+                float cornerRadius = typedArray.getDimension(R.styleable.ContentLoaderView_cornerRadius, 0f);
                 corners = new float[]{
                         cornerRadius, cornerRadius,
                         cornerRadius, cornerRadius,
                         cornerRadius, cornerRadius,
                         cornerRadius, cornerRadius
                 };
-                color = typedArray.getColor(R.styleable.LoaderView_android_color, color);
+                color = typedArray.getColor(R.styleable.ContentLoaderView_android_color, color);
                 paint.setColor(color);
             } finally {
                 typedArray.recycle();

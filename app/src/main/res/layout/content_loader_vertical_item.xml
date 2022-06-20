@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,7 +12,7 @@
         android:padding="10dp"
         android:gravity="center_vertical">
 
-        <com.erif.contentloader.LoaderView
+        <com.erif.contentloader.ContentLoaderView
             style="@style/Loader.Rounded.Small"/>
 
         <LinearLayout
@@ -22,10 +22,10 @@
             android:gravity="center_vertical"
             android:layout_marginStart="10dp">
 
-            <com.erif.contentloader.LoaderView
+            <com.erif.contentloader.ContentLoaderView
                 style="@style/Loader.Text"/>
 
-            <com.erif.contentloader.LoaderView
+            <com.erif.contentloader.ContentLoaderView
                 style="@style/Loader.Text.Subtitle.Medium"
                 android:layout_marginTop="5dp"/>
 
@@ -33,7 +33,7 @@
 
     </LinearLayout>
 
-    <com.erif.contentloader.LoaderView
+    <com.erif.contentloader.ContentLoaderView
         style="@style/Loader.Lines"/>
 
 </LinearLayout>

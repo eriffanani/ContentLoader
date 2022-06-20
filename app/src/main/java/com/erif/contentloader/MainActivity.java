@@ -1,9 +1,10 @@
 package com.erif.contentloader;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,30 +12,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ContentLoaderHorizontal loader = findViewById(R.id.content_loader);
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //loader.stopAndHide();
-            }
-        }, 2000);
 
-        Handler handler1 = new Handler();
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //loader.start();
-            }
-        }, 4000);
-
-        Handler handler2 = new Handler();
-        handler2.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //loader.stop();
-            }
-        }, 6000);
+        onClick(R.id.btnVertical, ActivityVertical.class);
+        onClick(R.id.btnHorizontal, ActivityHorizontal.class);
+        onClick(R.id.btnFrame, ActivityFrame.class);
 
     }
+
+    private void onClick(int id, Class<?> destination) {
+        getButton(id).setOnClickListener(view -> intent(destination));
+    }
+
+    private void intent(Class<?> destination) {
+        Intent intent = new Intent(this, destination);
+        startActivity(intent);
+    }
+
+    private Button getButton(int id) {
+        return (Button) findViewById(id);
+    }
+
 }

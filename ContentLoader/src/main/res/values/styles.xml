@@ -14,10 +14,22 @@
     </style>
 
     <style name="ContentLoader">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="ContentLoader.Match" parent="ContentLoader">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="ContentLoader.Match.All" parent="ContentLoader.Match">
+        <item name="android:layout_height">match_parent</item>
+    </style>
     <style name="ContentLoader.AutoStart" parent="ContentLoader">
+        <item name="android:autoStart">true</item>
+    </style>
+    <style name="ContentLoader.Match.AutoStart" parent="ContentLoader.Match">
+        <item name="android:autoStart">true</item>
+    </style>
+    <style name="ContentLoader.Match.All.AutoStart" parent="ContentLoader.Match.All">
         <item name="android:autoStart">true</item>
     </style>
 

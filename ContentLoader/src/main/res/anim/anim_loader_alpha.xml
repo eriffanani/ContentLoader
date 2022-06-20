@@ -6,7 +6,7 @@
     <alpha
         android:duration="600"
         android:fromAlpha="1.0"
-        android:toAlpha="0.3"
+        android:toAlpha="0.2"
         android:repeatCount="infinite"
         android:repeatMode="reverse"/>
 

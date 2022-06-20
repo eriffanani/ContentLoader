@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityVertical">
+
+    <com.erif.contentloader.ContentLoaderVertical
+        android:id="@+id/content_loader_vertical"
+        style="@style/ContentLoader.AutoStart">
+
+        <include layout="@layout/content_loader_vertical"/>
+
+    </com.erif.contentloader.ContentLoaderVertical>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/act_vertical_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_data"/>
+
+</RelativeLayout>

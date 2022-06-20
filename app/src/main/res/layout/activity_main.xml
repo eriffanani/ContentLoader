@@ -5,18 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <com.erif.contentloader.ContentLoaderVertical
-        android:id="@+id/content_loader"
-        style="@style/ContentLoader.AutoStart">
+    <Button
+        android:id="@+id/btnVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vertical"/>
 
-        <include layout="@layout/content_loader"/>
-        <include layout="@layout/content_loader"/>
-        <include layout="@layout/content_loader"/>
-        <include layout="@layout/content_loader"/>
-        <include layout="@layout/content_loader"/>
+    <Button
+        android:id="@+id/btnHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horizontal"/>
 
-    </com.erif.contentloader.ContentLoaderVertical>
+    <Button
+        android:id="@+id/btnFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FrameLayout"/>
 
 </LinearLayout>

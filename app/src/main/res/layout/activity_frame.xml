@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFrame">
+
+    <com.erif.contentloader.ContentLoader
+        android:id="@+id/act_frame_loader"
+        style="@style/ContentLoader.AutoStart"
+        android:layout_centerInParent="true">
+
+        <com.erif.contentloader.ContentLoaderView
+            style="@style/Loader.Square.XXLarge"/>
+
+    </com.erif.contentloader.ContentLoader>
+
+    <ImageView
+        android:id="@+id/act_frame_image"
+        android:layout_width="@dimen/loader_square_xxLarge"
+        android:layout_height="@dimen/loader_square_xxLarge"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

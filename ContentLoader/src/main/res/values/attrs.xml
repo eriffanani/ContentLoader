@@ -3,17 +3,20 @@
 
     <declare-styleable name="ContentLoader">
         <attr name="android:autoStart"/>
+        <attr name="android:duration"/>
     </declare-styleable>
 
     <declare-styleable name="ContentLoaderVertical">
         <attr name="android:autoStart"/>
+        <attr name="android:duration"/>/>
     </declare-styleable>
 
     <declare-styleable name="ContentLoaderHorizontal">
         <attr name="android:autoStart"/>
+        <attr name="android:duration"/>
     </declare-styleable>
 
-    <declare-styleable name="LoaderView">
+    <declare-styleable name="ContentLoaderView">
         <attr name="viewShape" format="integer">
             <flag name="square" value="0"/>
             <flag name="rounded" value="1"/>
