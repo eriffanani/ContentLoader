@@ -25,9 +25,9 @@ public class ActivityFrame extends AppCompatActivity {
 
         ContentLoader loader = findViewById(R.id.act_frame_loader);
         ImageView image = findViewById(R.id.act_frame_image);
-        loader.startAndHideContent(image);
+        loader.startAndHideContent(image, true);
 
-        new DelayTimer(2, () -> loader.stopAndShowContent(image)).start();
+        new DelayTimer(2, () -> loader.stopAndShowContent(image, true)).start();
 
     }
 

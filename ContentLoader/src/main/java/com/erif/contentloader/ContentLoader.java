@@ -73,15 +73,22 @@ public class ContentLoader extends FrameLayout {
 
     void startAndHideContent(View contentView) {
         start();
-        animContentHide.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {}
-            @Override
-            public void onAnimationEnd(Animation animation) {contentView.setVisibility(GONE);}
-            @Override
-            public void onAnimationRepeat(Animation animation) {}
-        });
-        contentView.startAnimation(animContentHide);
+        contentView.setVisibility(GONE);
+    }
+
+    void startAndHideContent(View contentView, boolean smooth) {
+        start();
+        if (smooth) {
+            animContentHide.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+                @Override
+                public void onAnimationEnd(Animation animation) {contentView.setVisibility(GONE);}
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+            contentView.startAnimation(animContentHide);
+        }
     }
 
     void stop() {
@@ -108,7 +115,13 @@ public class ContentLoader extends FrameLayout {
     void stopAndShowContent(View contentView) {
         stop();
         contentView.setVisibility(VISIBLE);
-        contentView.startAnimation(animContentShow);
+    }
+
+    void stopAndShowContent(View contentView, boolean smooth) {
+        stopAndShowContent(contentView);
+        if (smooth) {
+            contentView.startAnimation(animContentShow);
+        }
     }
 
     private void playAnim() {

@@ -34,11 +34,11 @@ public class ActivityVertical extends AppCompatActivity {
         setupList(recyclerView);
 
         ContentLoaderVertical loader = findViewById(R.id.content_loader_vertical);
-        loader.startAndHideContent(recyclerView);
+        loader.startAndHideContent(recyclerView, true);
 
         new DelayTimer(3, () -> {
             adapter.setList(list);
-            loader.stopAndShowContent(recyclerView);
+            loader.stopAndShowContent(recyclerView, true);
         }).start();
 
     }

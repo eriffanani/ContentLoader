@@ -34,11 +34,11 @@ public class ActivityHorizontal extends AppCompatActivity {
         setupList(recyclerView);
 
         ContentLoaderHorizontal loader = findViewById(R.id.content_loader_horizontal);
-        loader.startAndHideContent(recyclerView);
+        loader.startAndHideContent(recyclerView, true);
 
         new DelayTimer(3, () -> {
             adapter.setList(list);
-            loader.stopAndShowContent(recyclerView);
+            loader.stopAndShowContent(recyclerView, true);
         }).start();
 
     }
