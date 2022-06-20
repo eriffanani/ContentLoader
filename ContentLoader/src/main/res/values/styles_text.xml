@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Loader.Text" parent="Loader.Rounded">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/loader_text_title</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_small</item>
+    </style>
+    <style name="Loader.Text.Subtitle" parent="Loader.Text">
+        <item name="android:layout_height">@dimen/loader_text_subtitle</item>
+    </style>
+    <style name="Loader.Text.XXSmall" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_xxSmall</item>
+    </style>
+    <style name="Loader.Text.XSmall" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_xSmall</item>
+    </style>
+    <style name="Loader.Text.Small" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_small</item>
+    </style>
+    <style name="Loader.Text.Normal" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_normal</item>
+    </style>
+    <style name="Loader.Text.Medium" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_medium</item>
+    </style>
+    <style name="Loader.Text.Large" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_large</item>
+    </style>
+    <style name="Loader.Text.XLarge" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_xLarge</item>
+    </style>
+    <style name="Loader.Text.XXLarge" parent="Loader.Text">
+        <item name="android:layout_width">@dimen/loader_text_width_xxLarge</item>
+    </style>
+
+    <style name="Loader.Text.Subtitle.XXSmall" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_xxSmall</item>
+    </style>
+    <style name="Loader.Text.Subtitle.XSmall" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_xSmall</item>
+    </style>
+    <style name="Loader.Text.Subtitle.Small" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_small</item>
+    </style>
+    <style name="Loader.Text.Subtitle.Normal" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_normal</item>
+    </style>
+    <style name="Loader.Text.Subtitle.Medium" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_medium</item>
+    </style>
+    <style name="Loader.Text.Subtitle.Large" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_large</item>
+    </style>
+    <style name="Loader.Text.Subtitle.XLarge" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_xLarge</item>
+    </style>
+    <style name="Loader.Text.Subtitle.XXLarge" parent="Loader.Text.Subtitle">
+        <item name="android:layout_width">@dimen/loader_text_width_xxLarge</item>
+    </style>
+
+</resources>

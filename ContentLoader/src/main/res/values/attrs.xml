@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ContentLoader">
+        <attr name="android:autoStart"/>
+    </declare-styleable>
+
+    <declare-styleable name="ContentLoaderVertical">
+        <attr name="android:autoStart"/>
+    </declare-styleable>
+
+    <declare-styleable name="ContentLoaderHorizontal">
+        <attr name="android:autoStart"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoaderView">
+        <attr name="viewShape" format="integer">
+            <flag name="square" value="0"/>
+            <flag name="rounded" value="1"/>
+            <flag name="circle" value="2"/>
+        </attr>
+        <attr name="cornerRadius"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+
+</resources>

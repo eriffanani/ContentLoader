@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <com.erif.contentloader.LoaderView
+        style="@style/Loader.Rounded.Large"
+        android:layout_width="120dp"/>
+
+    <com.erif.contentloader.LoaderView
+        android:layout_marginTop="10dp"
+        style="@style/Loader.Text"/>
+
+    <com.erif.contentloader.LoaderView
+        android:layout_marginTop="5dp"
+        style="@style/Loader.Text.Subtitle" />
+
+</LinearLayout>

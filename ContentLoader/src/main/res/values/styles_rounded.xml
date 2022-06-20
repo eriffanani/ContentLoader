@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Loader.Rounded" parent="@style/Loader.Square">
+        <item name="viewShape">rounded</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_medium</item>
+    </style>
+
+    <style name="Loader.Rounded.XXSmall" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_xxSmall</item>
+        <item name="android:layout_height">@dimen/loader_square_xxSmall</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_small</item>
+    </style>
+    <style name="Loader.Rounded.XSmall" parent="@style/Loader.Rounded.XXSmall">
+        <item name="android:layout_width">@dimen/loader_square_xSmall</item>
+        <item name="android:layout_height">@dimen/loader_square_xSmall</item>
+    </style>
+    <style name="Loader.Rounded.Small" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_small</item>
+        <item name="android:layout_height">@dimen/loader_square_small</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_normal</item>
+    </style>
+    <style name="Loader.Rounded.Normal" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_normal</item>
+        <item name="android:layout_height">@dimen/loader_square_normal</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_normal</item>
+    </style>
+    <style name="Loader.Rounded.Medium" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_medium</item>
+        <item name="android:layout_height">@dimen/loader_square_medium</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_medium</item>
+    </style>
+    <style name="Loader.Rounded.Large" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_large</item>
+        <item name="android:layout_height">@dimen/loader_square_large</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_medium</item>
+    </style>
+    <style name="Loader.Rounded.XLarge" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_xLarge</item>
+        <item name="android:layout_height">@dimen/loader_square_xLarge</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_large</item>
+    </style>
+    <style name="Loader.Rounded.XXLarge" parent="@style/Loader.Rounded">
+        <item name="android:layout_width">@dimen/loader_square_xxLarge</item>
+        <item name="android:layout_height">@dimen/loader_square_xxLarge</item>
+        <item name="cornerRadius">@dimen/loader_corner_radius_large</item>
+    </style>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Loader.Circle" parent="Loader.Square">
+        <item name="viewShape">circle</item>
+    </style>
+
+    <style name="Loader.Circle.XXSmall" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_xxSmall</item>
+        <item name="android:layout_height">@dimen/loader_square_xxSmall</item>
+    </style>
+    <style name="Loader.Circle.XSmall" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_xSmall</item>
+        <item name="android:layout_height">@dimen/loader_square_xSmall</item>
+    </style>
+    <style name="Loader.Circle.Small" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_small</item>
+        <item name="android:layout_height">@dimen/loader_square_small</item>
+    </style>
+    <style name="Loader.Circle.Normal" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_normal</item>
+        <item name="android:layout_height">@dimen/loader_square_normal</item>
+    </style>
+    <style name="Loader.Circle.Medium" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_medium</item>
+        <item name="android:layout_height">@dimen/loader_square_medium</item>
+    </style>
+    <style name="Loader.Circle.Large" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_large</item>
+        <item name="android:layout_height">@dimen/loader_square_large</item>
+    </style>
+    <style name="Loader.Circle.XLarge" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_xLarge</item>
+        <item name="android:layout_height">@dimen/loader_square_xLarge</item>
+    </style>
+    <style name="Loader.Circle.XXLarge" parent="@style/Loader.Circle">
+        <item name="android:layout_width">@dimen/loader_square_xxLarge</item>
+        <item name="android:layout_height">@dimen/loader_square_xxLarge</item>
+    </style>
+
+</resources>

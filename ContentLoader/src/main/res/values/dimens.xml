@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="loader_square_xxSmall">20dp</dimen>
+    <dimen name="loader_square_xSmall">30dp</dimen>
+    <dimen name="loader_square_small">40dp</dimen>
+    <dimen name="loader_square_normal">50dp</dimen>
+    <dimen name="loader_square_medium">60dp</dimen>
+    <dimen name="loader_square_large">70dp</dimen>
+    <dimen name="loader_square_xLarge">80dp</dimen>
+    <dimen name="loader_square_xxLarge">90dp</dimen>
+    <dimen name="loader_square_xxxLarge">100dp</dimen>
+
+    <dimen name="loader_corner_radius_small">4dp</dimen>
+    <dimen name="loader_corner_radius_normal">6dp</dimen>
+    <dimen name="loader_corner_radius_medium">8dp</dimen>
+    <dimen name="loader_corner_radius_large">10dp</dimen>
+
+    <dimen name="loader_text_width_xxSmall">30dp</dimen>
+    <dimen name="loader_text_width_xSmall">70dp</dimen>
+    <dimen name="loader_text_width_small">150dp</dimen>
+    <dimen name="loader_text_width_normal">200dp</dimen>
+    <dimen name="loader_text_width_medium">250dp</dimen>
+    <dimen name="loader_text_width_large">300dp</dimen>
+    <dimen name="loader_text_width_xLarge">350dp</dimen>
+    <dimen name="loader_text_width_xxLarge">400dp</dimen>
+    <dimen name="loader_text_title">16dp</dimen>
+    <dimen name="loader_text_subtitle">12dp</dimen>
+
+    <dimen name="loader_line_height">1.2dp</dimen>
+    <dimen name="loader_line_height_medium">1.5dp</dimen>
+    <dimen name="loader_line_height_large">2dp</dimen>
+
+
+</resources>

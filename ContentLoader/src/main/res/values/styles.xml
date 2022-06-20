@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Loader.Lines" parent="@style/Loader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/loader_line_height</item>
+        <item name="android:color">@color/color_line_content_loader</item>
+    </style>
+    <style name="Loader.Lines.Medium" parent="@style/Loader.Lines">
+        <item name="android:layout_height">@dimen/loader_line_height_medium</item>
+    </style>
+    <style name="Loader.Lines.Large" parent="@style/Loader.Lines">
+        <item name="android:layout_height">@dimen/loader_line_height_large</item>
+    </style>
+
+    <style name="ContentLoader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ContentLoader.AutoStart" parent="ContentLoader">
+        <item name="android:autoStart">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_default_content_loader">#DCDCDC</color>
+    <color name="color_line_content_loader">#EBEBEB</color>
+</resources>
