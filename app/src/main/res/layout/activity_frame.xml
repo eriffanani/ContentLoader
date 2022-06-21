@@ -5,26 +5,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityFrame">
+    tools:context=".example.ActivityFrame">
 
-    <com.erif.contentloader.ContentLoader
+    <com.erif.contentloader.ContentLoaderFrameLayout
         android:id="@+id/act_frame_loader"
-        style="@style/ContentLoader.AutoStart"
-        android:layout_centerInParent="true">
+        style="@style/ContentLoader.Match.AutoStart"
+        android:layout_height="150dp">
 
-        <com.erif.contentloader.ContentLoaderView
-            style="@style/Loader.Square.XXLarge"/>
+        <com.erif.contentloader.ContentLoaderViewBanner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bannerPeep="leftAndRight"
+            android:padding="12dp"
+            app:peepPaddingVertical="18dp"/>
 
-    </com.erif.contentloader.ContentLoader>
+    </com.erif.contentloader.ContentLoaderFrameLayout>
 
-    <ImageView
-        android:id="@+id/act_frame_image"
-        android:layout_width="@dimen/loader_square_xxLarge"
-        android:layout_height="@dimen/loader_square_xxLarge"
-        android:src="@mipmap/ic_launcher"
-        android:scaleType="centerCrop"
-        android:visibility="gone"
-        android:layout_centerInParent="true"
-        tools:ignore="ContentDescription" />
+    <RelativeLayout
+        android:id="@+id/act_frame_layoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/act_frame_imgLeft"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="fitXY"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:layout_margin="12dp"
+            android:layout_toEndOf="@id/act_frame_imgLeft"
+            android:layout_toStartOf="@id/act_frame_imgRight"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/act_frame_imgRight"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

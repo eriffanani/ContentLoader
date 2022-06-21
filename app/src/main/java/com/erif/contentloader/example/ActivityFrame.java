@@ -1,4 +1,4 @@
-package com.erif.contentloader;
+package com.erif.contentloader.example;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.erif.contentloader.ContentLoaderFrameLayout;
+import com.erif.contentloader.R;
 import com.erif.contentloader.helper.DelayTimer;
 
 public class ActivityFrame extends AppCompatActivity {
@@ -22,9 +25,8 @@ public class ActivityFrame extends AppCompatActivity {
         }
         Toast.makeText(this, "Loading simulation...", Toast.LENGTH_SHORT).show();
 
-
-        ContentLoader loader = findViewById(R.id.act_frame_loader);
-        ImageView image = findViewById(R.id.act_frame_image);
+        ContentLoaderFrameLayout loader = findViewById(R.id.act_frame_loader);
+        RelativeLayout image = findViewById(R.id.act_frame_layoutImage);
         loader.startAndHideContent(image, true);
 
         new DelayTimer(2, () -> loader.stopAndShowContent(image, true)).start();

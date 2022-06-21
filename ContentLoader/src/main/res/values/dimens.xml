@@ -14,6 +14,7 @@
     <dimen name="loader_corner_radius_normal">6dp</dimen>
     <dimen name="loader_corner_radius_medium">8dp</dimen>
     <dimen name="loader_corner_radius_large">10dp</dimen>
+    <dimen name="loader_corner_radius_banner">18dp</dimen>
 
     <dimen name="loader_text_width_xxSmall">30dp</dimen>
     <dimen name="loader_text_width_xSmall">70dp</dimen>

@@ -6,16 +6,25 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.erif.contentloader.example.ActivityFrame;
+import com.erif.contentloader.example.ActivityGrid;
+import com.erif.contentloader.example.ActivityHorizontal;
+import com.erif.contentloader.example.ActivityVertical;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Content Loader");
+        }
 
         onClick(R.id.btnVertical, ActivityVertical.class);
         onClick(R.id.btnHorizontal, ActivityHorizontal.class);
-        onClick(R.id.btnFrame, ActivityFrame.class);
+        onClick(R.id.btnGrid, ActivityGrid.class);
+        onClick(R.id.btnNonList, ActivityFrame.class);
 
     }
 
@@ -29,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Button getButton(int id) {
-        return (Button) findViewById(id);
+        return findViewById(id);
     }
 
 }

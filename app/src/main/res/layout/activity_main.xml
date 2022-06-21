@@ -12,18 +12,24 @@
         android:id="@+id/btnVertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vertical"/>
+        android:text="Vertical List"/>
 
     <Button
         android:id="@+id/btnHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Horizontal"/>
+        android:text="Horizontal List"/>
 
     <Button
-        android:id="@+id/btnFrame"
+        android:id="@+id/btnGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FrameLayout"/>
+        android:text="Grid List"/>
+
+    <Button
+        android:id="@+id/btnNonList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non List"/>
 
 </LinearLayout>

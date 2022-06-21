@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityVertical">
+    tools:context=".example.ActivityVertical">
 
-    <com.erif.contentloader.ContentLoaderVertical
+    <com.erif.contentloader.ContentLoaderFrameLayout
         android:id="@+id/content_loader_vertical"
         style="@style/ContentLoader.AutoStart">
 
         <include layout="@layout/content_loader_vertical"/>
 
-    </com.erif.contentloader.ContentLoaderVertical>
+    </com.erif.contentloader.ContentLoaderFrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/act_vertical_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="10"
-        tools:listitem="@layout/item_data"/>
+        tools:listitem="@layout/item_data_vertical"/>
 
 </RelativeLayout>

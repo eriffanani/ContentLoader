@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.11390887290167866" />
         <entry key="app/src/main/res/layout/activity_frame.xml" value="0.23034188034188033" />
+        <entry key="app/src/main/res/layout/activity_grid.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/layout/activity_horizontal.xml" value="0.23034188034188033" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_vertical.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/layout/content_loader.xml" value="0.23881856540084387" />
+        <entry key="app/src/main/res/layout/content_loader_grid.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/layout/content_loader_grid_item.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/layout/content_loader_horizontal.xml" value="0.24102564102564103" />
         <entry key="app/src/main/res/layout/content_loader_horizontal_item.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/layout/content_loader_vertical.xml" value="0.23881856540084387" />
         <entry key="app/src/main/res/layout/content_loader_vertical_item.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/layout/item_data.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/layout/item_data_grid.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/layout/item_data_horizontal.xml" value="0.24188034188034188" />
       </map>
     </option>

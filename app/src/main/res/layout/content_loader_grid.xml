@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_columnWeight="1">
+
+            <com.erif.contentloader.ContentLoaderView
+                style="@style/Loader.Square.XXLarge"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="10dp"
+                style="@style/Loader.Text"/>
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+            <com.erif.contentloader.ContentLoaderView
+                android:layout_marginTop="5dp"
+                style="@style/Loader.Text.Subtitle" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+</ScrollView>

@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContentLoaderVertical extends LinearLayout {
+public class ContentLoaderFrameLayout extends FrameLayout {
 
     private Animation animLoader;
     private Animation animContentShow;
@@ -22,22 +22,22 @@ public class ContentLoaderVertical extends LinearLayout {
     private final List<View> childViews = new ArrayList<>();
     private int duration = 0;
 
-    public ContentLoaderVertical(@NonNull Context context) {
+    public ContentLoaderFrameLayout(@NonNull Context context) {
         super(context);
         init(context, null, 0, 0);
     }
 
-    public ContentLoaderVertical(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public ContentLoaderFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0, 0);
     }
 
-    public ContentLoaderVertical(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ContentLoaderFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, null, defStyleAttr, 0);
     }
 
-    public ContentLoaderVertical(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ContentLoaderFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr, defStyleRes);
     }
@@ -46,15 +46,14 @@ public class ContentLoaderVertical extends LinearLayout {
         animLoader = AnimationUtils.loadAnimation(context, R.anim.anim_loader_alpha);
         animContentShow = AnimationUtils.loadAnimation(context, R.anim.anim_loader_show_content);
         animContentHide = AnimationUtils.loadAnimation(context, R.anim.anim_loader_hide_content);
-        setOrientation(LinearLayout.VERTICAL);
         if (attrs != null) {
             TypedArray typedArray = context.getTheme().obtainStyledAttributes(
-                    attrs, R.styleable.ContentLoaderVertical, defStyleAttr, defStyleRes
+                    attrs, R.styleable.ContentLoaderFrameLayout, defStyleAttr, defStyleRes
             );
             boolean autoStart;
             try {
-                autoStart = typedArray.getBoolean(R.styleable.ContentLoaderVertical_android_autoStart, false);
-                duration = typedArray.getInt(R.styleable.ContentLoaderVertical_android_duration, 600);
+                autoStart = typedArray.getBoolean(R.styleable.ContentLoaderFrameLayout_android_autoStart, false);
+                duration = typedArray.getInt(R.styleable.ContentLoaderFrameLayout_android_duration, 600);
                 animLoader.setDuration(duration);
             } finally {
                 typedArray.recycle();
@@ -65,26 +64,26 @@ public class ContentLoaderVertical extends LinearLayout {
         }
     }
 
-    void start() {
+    public void start() {
         if (!isShown())
             setVisibility(VISIBLE);
         if (duration > 200)
             playAnim();
     }
 
-    void startAndHideContent(View contentView) {
+    public void startAndHideContent(View contentView) {
         start();
         contentView.setVisibility(GONE);
     }
 
-    void startAndHideContent(View contentView, boolean smooth) {
+    public void startAndHideContent(View contentView, boolean smooth) {
         start();
         if (smooth) {
             animContentHide.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {}
                 @Override
-                public void onAnimationEnd(Animation animation) { contentView.setVisibility(GONE); }
+                public void onAnimationEnd(Animation animation) {contentView.setVisibility(GONE);}
                 @Override
                 public void onAnimationRepeat(Animation animation) {}
             });
@@ -92,7 +91,7 @@ public class ContentLoaderVertical extends LinearLayout {
         }
     }
 
-    void stop() {
+    public void stop() {
         for (View child: childViews) {
             if (child != null) {
                 if (child.getAnimation() != null) {
@@ -113,15 +112,16 @@ public class ContentLoaderVertical extends LinearLayout {
         startAnimation(animHideLoader);
     }
 
-    void stopAndShowContent(View contentView) {
+    public void stopAndShowContent(View contentView) {
         stop();
         contentView.setVisibility(VISIBLE);
     }
 
-    void stopAndShowContent(View contentView, boolean smooth) {
+    public void stopAndShowContent(View contentView, boolean smooth) {
         stopAndShowContent(contentView);
-        if (smooth)
+        if (smooth) {
             contentView.startAnimation(animContentShow);
+        }
     }
 
     private void playAnim() {

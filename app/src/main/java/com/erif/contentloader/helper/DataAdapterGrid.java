@@ -13,7 +13,7 @@ import com.erif.contentloader.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataAdapterVertical extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class DataAdapterGrid extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Integer> list = new ArrayList<>();
 
@@ -21,12 +21,15 @@ public class DataAdapterVertical extends RecyclerView.Adapter<RecyclerView.ViewH
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.item_data_vertical, parent, false);
-        return new DataHolder(view);
+        return new MyHolder(
+                inflater.inflate(R.layout.item_data_grid, parent, false)
+        );
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {}
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+    }
 
     @Override
     public int getItemCount() {
@@ -39,9 +42,9 @@ public class DataAdapterVertical extends RecyclerView.Adapter<RecyclerView.ViewH
         notifyDataSetChanged();
     }
 
-    private static class DataHolder extends RecyclerView.ViewHolder {
+    private static class MyHolder extends RecyclerView.ViewHolder {
 
-        public DataHolder(@NonNull View itemView) {
+        public MyHolder(@NonNull View itemView) {
             super(itemView);
         }
     }

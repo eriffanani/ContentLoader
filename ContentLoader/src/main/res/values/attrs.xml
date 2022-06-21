@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="ContentLoader">
-        <attr name="android:autoStart"/>
-        <attr name="android:duration"/>
-    </declare-styleable>
-
-    <declare-styleable name="ContentLoaderVertical">
-        <attr name="android:autoStart"/>
-        <attr name="android:duration"/>/>
-    </declare-styleable>
-
-    <declare-styleable name="ContentLoaderHorizontal">
+    <declare-styleable name="ContentLoaderFrameLayout">
         <attr name="android:autoStart"/>
         <attr name="android:duration"/>
     </declare-styleable>
@@ -24,6 +14,19 @@
         </attr>
         <attr name="cornerRadius"/>
         <attr name="android:color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ContentLoaderViewBanner">
+        <attr name="android:color"/>
+        <attr name="bannerPeep" format="integer">
+            <flag name="none" value="0"/>
+            <flag name="left" value="1"/>
+            <flag name="right" value="2"/>
+            <flag name="leftAndRight" value="3"/>
+        </attr>
+        <attr name="cornerRadius"/>
+        <attr name="android:padding"/>
+        <attr name="peepPaddingVertical" format="dimension"/>
     </declare-styleable>
 
 </resources>

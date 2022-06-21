@@ -14,13 +14,16 @@
         android:theme="@style/Theme.ContentLoader"
         tools:targetApi="31">
         <activity
-            android:name=".ActivityFrame"
+            android:name=".example.ActivityFrame"
             android:exported="false" />
         <activity
-            android:name=".ActivityHorizontal"
+            android:name=".example.ActivityHorizontal"
             android:exported="false" />
         <activity
-            android:name=".ActivityVertical"
+            android:name=".example.ActivityVertical"
+            android:exported="false" />
+        <activity
+            android:name=".example.ActivityGrid"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
