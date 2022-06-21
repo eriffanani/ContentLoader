@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.erif.contentloader.example.ActivityCombine;
 import com.erif.contentloader.example.ActivityFrame;
 import com.erif.contentloader.example.ActivityGrid;
 import com.erif.contentloader.example.ActivityHorizontal;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         onClick(R.id.btnHorizontal, ActivityHorizontal.class);
         onClick(R.id.btnGrid, ActivityGrid.class);
         onClick(R.id.btnNonList, ActivityFrame.class);
+        onClick(R.id.btnCombine, ActivityCombine.class);
 
     }
 
