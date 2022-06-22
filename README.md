@@ -1,5 +1,5 @@
 # Content Loader
-Styling your snackbar easily and quickly
+This library was created to make it easier for android developers to create placeholders before data or content is displayed. This library can also be combined with ('com.facebook.shimmer:shimmer:0.5.0') as a placeholder view component.
 
 ## Installation
 #### repositories
