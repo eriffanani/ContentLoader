@@ -13,7 +13,7 @@ implementation 'com.github.eriffanani:ContentLoader:1.0.0'
 ```
 
 ### Example results
-<img src="https://user-images.githubusercontent.com/26743731/174986838-097c62e3-a131-40a9-8749-cbcb6d8de87f.gif" width="200"/> <img src="https://user-images.githubusercontent.com/26743731/174987015-5947051a-53a8-4def-9a14-dd127348af7d.gif" width="200"/> <img src="https://user-images.githubusercontent.com/26743731/174986942-04f009a3-a12d-4687-bd97-0b31d9e81564.gif" width="200"/> <img src="https://user-images.githubusercontent.com/26743731/174987064-ccc27106-f0e4-4c10-9319-72daa29afd4a.gif" width="200"/> <img src="https://user-images.githubusercontent.com/26743731/174987094-2005fe7e-766c-4328-a60f-15b12a0f8f8e.gif" width="200"/>
+<img src="https://user-images.githubusercontent.com/26743731/174986838-097c62e3-a131-40a9-8749-cbcb6d8de87f.gif" width="250"/> <img src="https://user-images.githubusercontent.com/26743731/174987015-5947051a-53a8-4def-9a14-dd127348af7d.gif" width="250"/> <img src="https://user-images.githubusercontent.com/26743731/174986942-04f009a3-a12d-4687-bd97-0b31d9e81564.gif" width="250"/> <img src="https://user-images.githubusercontent.com/26743731/174987064-ccc27106-f0e4-4c10-9319-72daa29afd4a.gif" width="250"/> <img src="https://user-images.githubusercontent.com/26743731/174987094-2005fe7e-766c-4328-a60f-15b12a0f8f8e.gif" width="250"/>
 
 ## How To Use
 ```xml
