@@ -23,7 +23,7 @@ public class ContentLoaderDrawable extends Drawable {
     private final int[] colors;
     private int width = 0;
     private int height = 0;
-    private final Matrix mShaderMatrix;
+    private final Matrix shaderMatrix;
     private ValueAnimator animator;
 
     public ContentLoaderDrawable() {
@@ -31,7 +31,7 @@ public class ContentLoaderDrawable extends Drawable {
         paint.setAntiAlias(true);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
         rect = new Rect();
-        mShaderMatrix = new Matrix();
+        shaderMatrix = new Matrix();
         int baseColor = 0xFF000000;
         int highlightColor = 0x66FAFAFA;
         colors = new int[]{
@@ -53,13 +53,13 @@ public class ContentLoaderDrawable extends Drawable {
     @Override
     public void draw(@NonNull Canvas canvas) {
         if (paint.getShader() == null) {
-            float intensity = 0f;
-            float dropOff = 0.5f;
+            float dropOffLarge = 0.5f;
+            float dropOffSmall = 0.001f;
             float[] positions = new float[]{
-                    Math.max((1f - intensity - dropOff) / 2f, 0f),
-                    Math.max((1f - intensity - 0.001f) / 2f, 0f),
-                    Math.min((1f + intensity + 0.001f) / 2f, 1f),
-                    Math.min((1f + intensity + dropOff) / 2f, 1f)
+                    getPosition(dropOffLarge, false),
+                    getPosition(dropOffSmall, false),
+                    getPosition(dropOffSmall, true),
+                    getPosition(dropOffLarge, true)
             };
             LinearGradient gradient = new LinearGradient(
                     0, 0, width, 0,
@@ -67,20 +67,29 @@ public class ContentLoaderDrawable extends Drawable {
             );
             paint.setShader(gradient);
         }
-        float tilt = 20f;
-        final float tiltTan = (float) Math.tan(Math.toRadians(tilt));
-        final float translateWidth = width + tiltTan * height;
+        float tiltSize = 20f;
+        final float tiltSizeTan = (float) Math.tan(Math.toRadians(tiltSize));
+        final float translateWidth = width + tiltSizeTan * height;
         final float animatedValue = animator != null ? animator.getAnimatedFraction() : 0f;
-        final float dx = offset(-translateWidth, translateWidth, animatedValue);
-        final float dy = 0;
-        mShaderMatrix.reset();
-        mShaderMatrix.setRotate(tilt, width / 2f, height / 2f);
-        mShaderMatrix.postTranslate(dx, dy);
-        paint.getShader().setLocalMatrix(mShaderMatrix);
+        final float dx = dxOffset(-translateWidth, translateWidth, animatedValue);
+        shaderMatrix.reset();
+        shaderMatrix.setRotate(tiltSize, width / 2f, height / 2f);
+        shaderMatrix.postTranslate(dx, 0);
+        paint.getShader().setLocalMatrix(shaderMatrix);
         canvas.drawRect(rect, paint);
     }
 
-    private float offset(float start, float end, float percent) {
+    private float getPosition(float drop, boolean add) {
+        float result;
+        if (add) {
+            result = Math.max((1f + 0f + drop) / 2f, 0f);
+        } else {
+            result = Math.max((1f - 0f - drop) / 2f, 0f);
+        }
+        return result;
+    }
+
+    private float dxOffset(float start, float end, float percent) {
         return start + (end - start) * percent;
     }
 
