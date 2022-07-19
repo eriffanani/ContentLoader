@@ -8,7 +8,7 @@
 
     <com.erif.contentloader.ContentLoaderFrameLayout
         android:id="@+id/content_loader_horizontal"
-        style="@style/ContentLoader.AutoStart">
+        style="@style/ContentLoader">
 
         <include layout="@layout/content_loader_horizontal"/>
 

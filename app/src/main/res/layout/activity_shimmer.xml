@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".example.ActivityVertical">
+    tools:context=".example.ActivityShimmer">
 
     <com.erif.contentloader.ContentLoaderFrameLayout
-        android:id="@+id/content_loader_vertical"
-        style="@style/ContentLoader">
+        android:id="@+id/act_shimmer_contentLoader"
+        style="@style/ContentLoader.Shimmer">
 
-        <include layout="@layout/content_loader_vertical"/>
+        <include
+            layout="@layout/content_loader_vertical"/>
 
     </com.erif.contentloader.ContentLoaderFrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/act_vertical_recyclerView"
+        android:id="@+id/act_shimmer_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="10"
         tools:listitem="@layout/item_data_vertical"/>
 
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

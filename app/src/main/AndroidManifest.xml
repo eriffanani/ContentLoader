@@ -14,10 +14,13 @@
         android:theme="@style/Theme.ContentLoader"
         tools:targetApi="31">
         <activity
+            android:name=".example.ActivityShimmer"
+            android:exported="false" />
+        <activity
             android:name=".example.ActivityCombine"
             android:exported="false" />
         <activity
-            android:name=".example.ActivityFrame"
+            android:name=".example.ActivityBanner"
             android:exported="false" />
         <activity
             android:name=".example.ActivityHorizontal"

@@ -9,7 +9,8 @@
 
     <com.erif.contentloader.ContentLoaderFrameLayout
         android:id="@+id/content_loader_grid"
-        style="@style/ContentLoader.Match.AutoStart">
+        style="@style/ContentLoader"
+        android:layout_width="match_parent">
 
         <include layout="@layout/content_loader_grid"/>
 

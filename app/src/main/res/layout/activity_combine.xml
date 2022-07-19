@@ -22,7 +22,7 @@
 
                 <com.erif.contentloader.ContentLoaderFrameLayout
                     android:id="@+id/act_combine_loader"
-                    style="@style/ContentLoader.Match.AutoStart"
+                    style="@style/ContentLoader"
                     android:layout_height="150dp">
 
                     <com.erif.contentloader.ContentLoaderViewBanner
@@ -81,7 +81,7 @@
 
                 <com.erif.contentloader.ContentLoaderFrameLayout
                     android:id="@+id/content_combine_vertical"
-                    style="@style/ContentLoader.AutoStart">
+                    style="@style/ContentLoader">
 
                     <include layout="@layout/content_loader_vertical"/>
 

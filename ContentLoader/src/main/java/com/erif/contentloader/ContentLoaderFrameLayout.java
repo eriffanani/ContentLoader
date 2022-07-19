@@ -2,6 +2,8 @@ package com.erif.contentloader;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
@@ -21,6 +23,11 @@ public class ContentLoaderFrameLayout extends FrameLayout {
     private Animation animContentHide;
     private final List<View> childViews = new ArrayList<>();
     private int duration = 0;
+    private int loaderType = TYPE_BLINK;
+    private ContentLoaderDrawable drawable;
+
+    private static final int TYPE_BLINK = 0;
+    private static final int TYPE_SHIMMER = 1;
 
     public ContentLoaderFrameLayout(@NonNull Context context) {
         super(context);
@@ -43,9 +50,12 @@ public class ContentLoaderFrameLayout extends FrameLayout {
     }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        setWillNotDraw(false);
         animLoader = AnimationUtils.loadAnimation(context, R.anim.anim_loader_alpha);
         animContentShow = AnimationUtils.loadAnimation(context, R.anim.anim_loader_show_content);
         animContentHide = AnimationUtils.loadAnimation(context, R.anim.anim_loader_hide_content);
+        drawable = new ContentLoaderDrawable();
+        drawable.setCallback(this);
         if (attrs != null) {
             TypedArray typedArray = context.getTheme().obtainStyledAttributes(
                     attrs, R.styleable.ContentLoaderFrameLayout, defStyleAttr, defStyleRes
@@ -53,8 +63,13 @@ public class ContentLoaderFrameLayout extends FrameLayout {
             boolean autoStart;
             try {
                 autoStart = typedArray.getBoolean(R.styleable.ContentLoaderFrameLayout_android_autoStart, false);
-                duration = typedArray.getInt(R.styleable.ContentLoaderFrameLayout_android_duration, 600);
-                animLoader.setDuration(duration);
+                loaderType = typedArray.getInt(R.styleable.ContentLoaderFrameLayout_loaderType, TYPE_BLINK);
+                duration = typedArray.getInt(R.styleable.ContentLoaderFrameLayout_android_duration, loaderType == TYPE_SHIMMER ? 1200 : 600);
+                if (loaderType == TYPE_SHIMMER) {
+                    setLayerType(LAYER_TYPE_HARDWARE, null);
+                } else {
+                    animLoader.setDuration(duration);
+                }
             } finally {
                 typedArray.recycle();
             }
@@ -64,11 +79,51 @@ public class ContentLoaderFrameLayout extends FrameLayout {
         }
     }
 
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        final int width = getWidth();
+        final int height = getHeight();
+        if (drawable != null)
+            drawable.setBounds(0, 0, width, height);
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        if (drawable != null)
+            drawable.maybeStartShimmer();
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
+        if (drawable != null)
+            drawable.draw(canvas);
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        if (drawable != null)
+            drawable.stop();
+    }
+
+    @Override
+    protected boolean verifyDrawable(@NonNull Drawable who) {
+        return super.verifyDrawable(who) || who == drawable;
+    }
+
     public void start() {
         if (!isShown())
             setVisibility(VISIBLE);
-        if (duration > 200)
-            playAnim();
+        if (duration > 200) {
+            if (loaderType == TYPE_SHIMMER) {
+                drawable.start();
+            } else {
+                playAnim();
+            }
+        }
     }
 
     public void startAndHideContent(View contentView) {
@@ -92,11 +147,15 @@ public class ContentLoaderFrameLayout extends FrameLayout {
     }
 
     public void stop() {
-        for (View child: childViews) {
-            if (child != null) {
-                if (child.getAnimation() != null) {
-                    child.getAnimation().cancel();
-                    child.clearAnimation();
+        if (loaderType == TYPE_SHIMMER) {
+            drawable.stop();
+        } else {
+            for (View child: childViews) {
+                if (child != null) {
+                    if (child.getAnimation() != null) {
+                        child.getAnimation().cancel();
+                        child.clearAnimation();
+                    }
                 }
             }
         }
@@ -119,9 +178,8 @@ public class ContentLoaderFrameLayout extends FrameLayout {
 
     public void stopAndShowContent(View contentView, boolean smooth) {
         stopAndShowContent(contentView);
-        if (smooth) {
+        if (smooth)
             contentView.startAnimation(animContentShow);
-        }
     }
 
     private void playAnim() {

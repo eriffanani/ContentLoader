@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -13,12 +12,12 @@ import com.erif.contentloader.ContentLoaderFrameLayout;
 import com.erif.contentloader.R;
 import com.erif.contentloader.helper.DelayTimer;
 
-public class ActivityFrame extends AppCompatActivity {
+public class ActivityBanner extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frame);
+        setContentView(R.layout.activity_banner);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Frame Loader");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

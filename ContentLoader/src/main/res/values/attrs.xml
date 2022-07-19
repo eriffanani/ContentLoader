@@ -4,6 +4,10 @@
     <declare-styleable name="ContentLoaderFrameLayout">
         <attr name="android:autoStart"/>
         <attr name="android:duration"/>
+        <attr name="loaderType" format="flags">
+            <flag name="blink" value="0"/>
+            <flag name="shimmer" value="1"/>
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="ContentLoaderView">

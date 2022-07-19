@@ -12,6 +12,11 @@ public class DelayTimer {
         this.callback = callback;
     }
 
+    public DelayTimer(double seconds, DelayTimerCallback callback) {
+        this.duration = (int) (seconds * 1000);
+        this.callback = callback;
+    }
+
     public void start() {
         Timer timer = new Timer(duration, 1000, callback);
         timer.start();

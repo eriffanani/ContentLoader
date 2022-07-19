@@ -7,9 +7,10 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.erif.contentloader.example.ActivityCombine;
-import com.erif.contentloader.example.ActivityFrame;
+import com.erif.contentloader.example.ActivityBanner;
 import com.erif.contentloader.example.ActivityGrid;
 import com.erif.contentloader.example.ActivityHorizontal;
+import com.erif.contentloader.example.ActivityShimmer;
 import com.erif.contentloader.example.ActivityVertical;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         onClick(R.id.btnVertical, ActivityVertical.class);
         onClick(R.id.btnHorizontal, ActivityHorizontal.class);
         onClick(R.id.btnGrid, ActivityGrid.class);
-        onClick(R.id.btnNonList, ActivityFrame.class);
+        onClick(R.id.btnBanner, ActivityBanner.class);
         onClick(R.id.btnCombine, ActivityCombine.class);
+        onClick(R.id.btnShimmer, ActivityShimmer.class);
 
     }
 
