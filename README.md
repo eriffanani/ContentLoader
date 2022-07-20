@@ -9,7 +9,7 @@ maven { url 'https://jitpack.io' }
 
 #### dependencies
 ```gradle
-implementation 'com.github.eriffanani:ContentLoader:1.0.0'
+implementation 'com.github.eriffanani:ContentLoader:1.2.0'
 ```
 
 ### Example results
