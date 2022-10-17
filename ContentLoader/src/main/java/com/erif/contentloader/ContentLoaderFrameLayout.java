@@ -6,8 +6,8 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
@@ -51,9 +51,18 @@ public class ContentLoaderFrameLayout extends FrameLayout {
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         setWillNotDraw(false);
-        animLoader = AnimationUtils.loadAnimation(context, R.anim.anim_loader_alpha);
-        animContentShow = AnimationUtils.loadAnimation(context, R.anim.anim_loader_show_content);
-        animContentHide = AnimationUtils.loadAnimation(context, R.anim.anim_loader_hide_content);
+
+        animLoader = new AlphaAnimation(1f, 0.4f);
+        animLoader.setDuration(600);
+        animLoader.setRepeatCount(Animation.INFINITE);
+        animLoader.setRepeatMode(Animation.REVERSE);
+
+        animContentShow = new AlphaAnimation(0f, 1f);
+        animContentShow.setDuration(600);
+
+        animContentHide = new AlphaAnimation(1f, 0f);
+        animContentHide.setDuration(600);
+
         drawable = new ContentLoaderDrawable();
         drawable.setCallback(this);
         if (attrs != null) {
@@ -159,7 +168,8 @@ public class ContentLoaderFrameLayout extends FrameLayout {
                 }
             }
         }
-        Animation animHideLoader = AnimationUtils.loadAnimation(getContext(), R.anim.anim_loader_hide_content);
+        Animation animHideLoader = new AlphaAnimation(1f, 0f);
+        animHideLoader.setDuration(600);
         animHideLoader.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {}
