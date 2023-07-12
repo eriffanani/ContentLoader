@@ -1,16 +1,70 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ContentLoader" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+    <style name="Theme.ContentLoader" parent="Theme.Material3.Light">
+        <!--Primary-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+        <!--Secondary-->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer</item>
+        <!--Tertiary-->
+        <item name="colorTertiary">@color/colorTertiary</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer</item>
+        <!--Error-->
+        <item name="colorError">@color/colorError</item>
+        <item name="colorOnError">@color/colorOnError</item>
+        <item name="colorErrorContainer">@color/colorErrorContainer</item>
+        <item name="colorOnErrorContainer">@color/colorOnErrorContainer</item>
+        <!--Background-->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <!--Surface-->
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorOutline">@color/colorOutline</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant</item>
+        <!--Status Bar-->
+        <item name="android:statusBarColor">@color/colorPrimaryContainer</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <!--Action Bar-->
+        <item name="actionBarStyle">@style/Theme.ActionBar</item>
+
+    </style>
+
+    <!--Action Bar Style-->
+    <style name="Theme.ActionBar" parent="Widget.Material3.Light.ActionBar.Solid">
+        <item name="background">@color/colorPrimaryContainer</item>
+        <item name="titleTextAppearance">@style/Theme.ActionBar.Title</item>
+        <item name="titleTextStyle">@style/Theme.ActionBar.Title</item>
+        <item name="subtitleTextStyle">@style/Theme.ActionBar.Subtitle</item>
+    </style>
+    <!--Action Bar Title Style-->
+    <style name="Theme.ActionBar.Title" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">@color/colorOnPrimaryContainer</item>
+    </style>
+    <style name="Theme.ActionBar.Subtitle" parent="TextAppearance.Material3.ActionBar.Subtitle">
+        <item name="android:textColor">@color/colorSecondary</item>
+    </style>
+
+    <style name="Theme.ContentLoader.NoActionBar" parent="Theme.Material3.Light.NoActionBar">
+
+        <!--<item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>-->
+
     </style>
+
 </resources>

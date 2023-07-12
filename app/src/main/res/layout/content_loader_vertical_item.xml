@@ -3,17 +3,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         android:gravity="center_vertical">
 
         <com.erif.contentloader.ContentLoaderView
-            style="@style/Loader.Square.Small"/>
+            style="@style/Loader.Rounded.Medium"
+            app:cornerRadius="12dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +32,7 @@
 
             <com.erif.contentloader.ContentLoaderView
                 style="@style/Loader.Text.Subtitle.Medium"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="10dp"/>
 
         </LinearLayout>
 

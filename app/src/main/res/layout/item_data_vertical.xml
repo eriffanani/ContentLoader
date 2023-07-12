@@ -4,19 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         android:gravity="center_vertical">
 
-        <ImageView
-            android:layout_width="@dimen/loader_square_small"
-            android:layout_height="@dimen/loader_square_small"
-            android:src="@mipmap/ic_launcher"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_vertical_img"
+            android:layout_width="@dimen/loader_square_medium"
+            android:layout_height="@dimen/loader_square_medium"
+            android:src="@mipmap/man1"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize12dp"
             tools:ignore="ContentDescription" />
 
         <LinearLayout
@@ -29,7 +36,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="17sp"
+                android:textColor="@color/colorOnBackground"
                 android:text="Lorem ipsum text lorem ipsum text lorem ipsum text"
                 android:maxLines="1"
                 android:ellipsize="end"/>
@@ -37,8 +45,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorOutline"
+                android:textSize="14sp"
                 android:includeFontPadding="false"
                 android:text="Lorem ipsum text lorem ipsum text"/>
 

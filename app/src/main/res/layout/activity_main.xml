@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnVertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonDefault"
+        app:icon="@drawable/ic_vertical"
         android:text="Vertical List"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonMargin"
+        app:icon="@drawable/ic_horizontal"
         android:text="Horizontal List"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGrid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonMargin"
+        app:icon="@drawable/ic_grid"
         android:text="Grid List"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Banner"/>
+        style="@style/ButtonMargin"
+        app:icon="@drawable/ic_slider"
+        android:text="Slider / Banner"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCombine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Combine"/>
+        style="@style/ButtonMargin"
+        app:icon="@drawable/ic_combined"
+        android:text="Combined"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnShimmer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonMargin"
+        app:icon="@drawable/ic_shimmer"
         android:text="Shimmer"/>
 
 </LinearLayout>

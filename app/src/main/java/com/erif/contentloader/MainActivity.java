@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Content Loader");
+            getSupportActionBar().setTitle("Content Loader Animation");
+            getSupportActionBar().setSubtitle("https://github.com/eriffanani/ContentLoader");
         }
 
         onClick(R.id.btnVertical, ActivityVertical.class);

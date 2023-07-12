@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="color_shimmer">#C8C8C8</color>
-    <color name="color_shimmer2">#F0F0F0</color>
+    <!--Primary-->
+    <color name="colorPrimary">#0756CF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#D9E2FE</color>
+    <color name="colorOnPrimaryContainer">#001747</color>
+    <!--Secondary-->
+    <color name="colorSecondary">#585E71</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#DCE2F9</color>
+    <color name="colorOnSecondaryContainer">#151B2C</color>
+    <!--Tertiary-->
+    <color name="colorTertiary">#735371</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+    <color name="colorTertiaryContainer">#FED7F9</color>
+    <color name="colorOnTertiaryContainer">#2B112B</color>
+    <!--Error-->
+    <color name="colorError">#BA1C1A</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorErrorContainer">#FFDAD6</color>
+    <color name="colorOnErrorContainer">#410002</color>
+    <!--Background-->
+    <color name="background">#FFFFFF</color>
+    <color name="colorOnBackground">#1B1B1F</color>
+    <!--Surface-->
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#1B1B1F</color>
+    <color name="colorOutline">#757780</color>
+    <color name="colorSurfaceVariant">#E1E2EC</color>
+    <color name="colorOnSurfaceVariant">#45464F</color>
+
 </resources>
