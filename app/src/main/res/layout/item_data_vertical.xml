@@ -23,7 +23,7 @@
             android:layout_height="@dimen/loader_square_medium"
             android:src="@mipmap/man1"
             android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize12dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
             tools:ignore="ContentDescription" />
 
         <LinearLayout

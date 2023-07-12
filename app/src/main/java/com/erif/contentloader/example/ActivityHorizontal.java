@@ -2,6 +2,7 @@ package com.erif.contentloader.example;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.erif.contentloader.ContentLoaderFrameLayout;
 import com.erif.contentloader.R;
-import com.erif.contentloader.helper.DataAdapterHorizontal;
+import com.erif.contentloader.helper.AdapterHorizontal;
 import com.erif.contentloader.helper.DelayTimer;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class ActivityHorizontal extends AppCompatActivity {
 
-    private final DataAdapterHorizontal adapter = new DataAdapterHorizontal();
+    private final AdapterHorizontal adapter = new AdapterHorizontal();
     private final List<Integer> list = new ArrayList<>();
 
     @Override
@@ -35,12 +36,14 @@ public class ActivityHorizontal extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.act_horizontal_recyclerView);
         setupList(recyclerView);
 
+        LinearLayout content = findViewById(R.id.act_horizontal_contents);
+
         ContentLoaderFrameLayout loader = findViewById(R.id.content_loader_horizontal);
-        loader.startAndHideContent(recyclerView, true);
+        loader.startAndHideContent(content, true);
 
         new DelayTimer(3, () -> {
             adapter.setList(list);
-            loader.stopAndShowContent(recyclerView, true);
+            loader.stopAndShowContent(content, true);
         }).start();
 
     }

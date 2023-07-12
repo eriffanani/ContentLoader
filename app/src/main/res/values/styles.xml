@@ -4,16 +4,34 @@
     <style name="ButtonDefault" parent="Widget.Material3.Button.ElevatedButton.Icon">
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">17sp</item>
         <item name="iconSize">26dp</item>
     </style>
 
     <style name="ButtonMargin" parent="ButtonDefault">
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginTop">20dp</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.App.CornerSize12dp" parent="">
         <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="GridLoader">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_columnWeight">1</item>
+    </style>
+
+    <style name="GridLoader.Image" parent="@style/Loader.Square">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintDimensionRatio">1:1</item>
     </style>
 
 </resources>

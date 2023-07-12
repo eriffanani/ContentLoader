@@ -2,41 +2,48 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="110dp"
+    android:layout_width="170dp"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="5dp">
+    android:layout_marginEnd="12dp">
 
-    <ImageView
-        style="@style/Loader.Rounded.XXLarge"
-        android:src="@mipmap/ic_launcher"
-        android:scaleType="centerCrop"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_horizontal_img"
         android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/women2"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize12dp"
         tools:ignore="ContentDescription" />
 
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lorem ipsum lorem"
-        android:maxLines="1"
-        android:textSize="14sp"
-        android:ellipsize="end"/>
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lorem ipsum lorem"
-        android:maxLines="1"
-        android:textSize="12sp"
-        android:ellipsize="end"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet ipsum dolor sit amet"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:ellipsize="end"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lorem ipsum lorem"
-        android:maxLines="1"
-        android:textSize="12sp"
-        android:ellipsize="end"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem"
+            android:maxLines="2"
+            android:textColor="#787878"
+            android:textSize="13sp"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,7 +14,7 @@ import com.erif.contentloader.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataAdapterGrid extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class AdapterGrid extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Integer> list = new ArrayList<>();
 
@@ -28,7 +29,10 @@ public class DataAdapterGrid extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+        if (holder instanceof MyHolder mHolder) {
+            int image = ImageResource.getAll();
+            mHolder.img.setImageResource(image);
+        }
     }
 
     @Override
@@ -44,8 +48,11 @@ public class DataAdapterGrid extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private static class MyHolder extends RecyclerView.ViewHolder {
 
+        ImageView img;
+
         public MyHolder(@NonNull View itemView) {
             super(itemView);
+            img = itemView.findViewById(R.id.item_grid_img);
         }
     }
 

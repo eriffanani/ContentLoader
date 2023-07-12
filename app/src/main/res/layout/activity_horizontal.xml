@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,13 +15,35 @@
 
     </com.erif.contentloader.ContentLoaderFrameLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/act_horizontal_recyclerView"
+    <LinearLayout
+        android:id="@+id/act_horizontal_contents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:itemCount="10"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_data_horizontal"/>
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECOMMENDATION"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/act_horizontal_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="10"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_data_horizontal"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

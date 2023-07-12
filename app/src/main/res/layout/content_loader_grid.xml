@@ -2,206 +2,180 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:paddingStart="2dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="0dp"
+    android:scrollbars="none">
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:useDefaultMargins="true">
+        android:columnCount="3">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/GridLoader">
             <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
-            <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
-            <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_columnWeight="1">
-
-            <com.erif.contentloader.ContentLoaderView
-                style="@style/Loader.Square.XXLarge"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="10dp"
-                style="@style/Loader.Text"/>
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-            <com.erif.contentloader.ContentLoaderView
-                android:layout_marginTop="5dp"
-                style="@style/Loader.Text.Subtitle" />
-
-        </LinearLayout>
+                style="@style/GridLoader.Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </GridLayout>
 

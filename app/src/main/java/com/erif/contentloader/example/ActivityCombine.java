@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.erif.contentloader.ContentLoaderFrameLayout;
 import com.erif.contentloader.R;
-import com.erif.contentloader.helper.DataAdapterVertical;
+import com.erif.contentloader.helper.AdapterVertical;
 import com.erif.contentloader.helper.DelayTimer;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ActivityCombine extends AppCompatActivity {
 
-    private final DataAdapterVertical adapter = new DataAdapterVertical();
+    private final AdapterVertical adapter = new AdapterVertical();
     private final List<Integer> list = new ArrayList<>();
 
     @Override
