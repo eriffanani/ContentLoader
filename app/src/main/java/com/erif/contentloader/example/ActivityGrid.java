@@ -1,18 +1,17 @@
 package com.erif.contentloader.example;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
-
-import com.erif.contentloader.ContentLoaderFrameLayout;
+import com.erif.contentloader.LoaderContainer;
 import com.erif.contentloader.R;
-import com.erif.contentloader.helper.AdapterGrid;
-import com.erif.contentloader.helper.DelayTimer;
+import com.erif.contentloader.helper.adapter.AdapterGrid;
+import com.erif.contentloader.helper.timer.Delay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,17 +29,19 @@ public class ActivityGrid extends AppCompatActivity {
             getSupportActionBar().setTitle("Grid Loader");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        Toast.makeText(this, "Api request...", Toast.LENGTH_SHORT).show();
 
         RecyclerView recyclerView = findViewById(R.id.act_grid_recyclerView);
         setupList(recyclerView);
 
-        ContentLoaderFrameLayout loader = findViewById(R.id.content_loader_grid);
-        loader.startAndHideContent(recyclerView, true);
+        LoaderContainer loader = findViewById(R.id.content_loader_grid);
+        loader.post(() -> loader.startAndHideContent(recyclerView, true));
 
-        new DelayTimer(3, () -> {
+        new Delay(2.5, () -> {
+            recyclerView.scheduleLayoutAnimation();
             adapter.setList(list);
-            loader.stopAndShowContent(recyclerView, true);
+            new Delay(0.1, () -> {
+                loader.stopAndShowContent(recyclerView, true);
+            }).start();
         }).start();
 
     }

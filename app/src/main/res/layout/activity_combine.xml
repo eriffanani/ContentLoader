@@ -20,78 +20,164 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.erif.contentloader.ContentLoaderFrameLayout
-                    android:id="@+id/act_combine_loader"
+                <com.erif.contentloader.LoaderContainer
+                    android:id="@+id/act_combined_loader"
                     style="@style/ContentLoader"
-                    android:layout_height="150dp">
+                    android:layout_height="175dp"
+                    android:layout_marginTop="15dp">
 
-                    <com.erif.contentloader.ContentLoaderViewBanner
+                    <com.erif.contentloader.LoaderViewBanner
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:bannerPeep="leftAndRight"
                         android:padding="12dp"
+                        app:cornerRadius="12dp"
                         app:peepPaddingVertical="18dp"/>
 
-                </com.erif.contentloader.ContentLoaderFrameLayout>
+                </com.erif.contentloader.LoaderContainer>
 
                 <RelativeLayout
-                    android:id="@+id/act_combine_layoutImage"
+                    android:id="@+id/act_combined_layoutImage"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="175dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
                     android:visibility="gone">
 
-                    <ImageView
-                        android:id="@+id/act_frame_imgLeft"
-                        android:layout_width="15dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_launcher_background"
-                        android:scaleType="fitXY"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginBottom="18dp"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/act_combined_imgLeft"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@mipmap/promo2"
                         android:scaleType="centerCrop"
-                        android:layout_margin="12dp"
-                        android:layout_toEndOf="@id/act_frame_imgLeft"
-                        android:layout_toStartOf="@id/act_frame_imgRight"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize12dp"
                         tools:ignore="ContentDescription" />
 
-                    <ImageView
-                        android:id="@+id/act_frame_imgRight"
-                        android:layout_width="15dp"
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/act_combined_imgCenter"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ic_launcher_background"
-                        android:layout_alignParentEnd="true"
-                        android:scaleType="fitXY"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginBottom="18dp"
+                        android:src="@mipmap/promo3"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize12dp"
+                        tools:ignore="ContentDescription" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/act_combined_imgRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/promo1"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize12dp"
                         tools:ignore="ContentDescription" />
 
                 </RelativeLayout>
 
             </RelativeLayout>
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <com.erif.contentloader.LoaderView
+                    style="@style/Loader.Circle"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"/>
+
+                <com.erif.contentloader.LoaderView
+                    style="@style/Loader.Circle"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:color="@color/colorPrimary"
+                    android:layout_marginStart="5dp"/>
+
+                <com.erif.contentloader.LoaderView
+                    style="@style/Loader.Circle"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:layout_marginStart="5dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.erif.contentloader.ContentLoaderFrameLayout
-                    android:id="@+id/content_combine_vertical"
+                <com.erif.contentloader.LoaderContainer
+                    android:id="@+id/content_loader_horizontal"
+                    style="@style/ContentLoader.Shimmer">
+
+                    <include layout="@layout/content_loader_horizontal"/>
+
+                </com.erif.contentloader.LoaderContainer>
+
+                <LinearLayout
+                    android:id="@+id/act_combined_horizontal_contents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RECOMMENDATION"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/act_combined_horizontal_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="10"
+                        android:clipToPadding="false"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="5dp"
+                        android:nestedScrollingEnabled="false"
+                        android:layoutAnimation="@anim/slide_left_layout"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_data_horizontal"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <com.erif.contentloader.LoaderContainer
+                    android:id="@+id/act_combined_loader_vertical"
                     style="@style/ContentLoader">
 
                     <include layout="@layout/content_loader_vertical"/>
 
-                </com.erif.contentloader.ContentLoaderFrameLayout>
+                </com.erif.contentloader.LoaderContainer>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/act_combine_recyclerView"
+                    android:id="@+id/act_combined_loader_vertical_recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:itemCount="10"
+                    android:layoutAnimation="@anim/fade_in_layout"
                     tools:listitem="@layout/item_data_vertical"/>
 
             </RelativeLayout>

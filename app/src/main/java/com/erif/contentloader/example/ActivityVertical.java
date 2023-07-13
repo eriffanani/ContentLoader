@@ -1,18 +1,17 @@
 package com.erif.contentloader.example;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
-
-import com.erif.contentloader.ContentLoaderFrameLayout;
+import com.erif.contentloader.LoaderContainer;
 import com.erif.contentloader.R;
-import com.erif.contentloader.helper.AdapterVertical;
-import com.erif.contentloader.helper.DelayTimer;
+import com.erif.contentloader.helper.adapter.AdapterVertical;
+import com.erif.contentloader.helper.timer.Delay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,17 +29,19 @@ public class ActivityVertical extends AppCompatActivity {
             getSupportActionBar().setTitle("Vertical Loader");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        Toast.makeText(this, "Loading simulation...", Toast.LENGTH_SHORT).show();
 
         RecyclerView recyclerView = findViewById(R.id.act_vertical_recyclerView);
         setupList(recyclerView);
 
-        ContentLoaderFrameLayout loader = findViewById(R.id.content_loader_vertical);
+        LoaderContainer loader = findViewById(R.id.content_loader_vertical);
         loader.startAndHideContent(recyclerView, true);
 
-        new DelayTimer(3, () -> {
+        new Delay(2.5, () -> {
             adapter.setList(list);
-            loader.stopAndShowContent(recyclerView, true);
+            recyclerView.scheduleLayoutAnimation();
+            new Delay(0.1, () ->
+                    loader.stopAndShowContent(recyclerView, true)
+            ).start();
         }).start();
 
     }

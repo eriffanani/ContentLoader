@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".example.ActivityGrid">
 
-    <com.erif.contentloader.ContentLoaderFrameLayout
+    <com.erif.contentloader.LoaderContainer
         android:id="@+id/content_loader_grid"
-        style="@style/ContentLoader"
+        style="@style/ContentLoader.Shimmer"
         android:layout_width="match_parent">
 
         <include layout="@layout/content_loader_grid"/>
 
-    </com.erif.contentloader.ContentLoaderFrameLayout>
+    </com.erif.contentloader.LoaderContainer>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/act_grid_recyclerView"
@@ -23,8 +23,9 @@
         tools:itemCount="20"
         android:clipToPadding="false"
         android:paddingStart="2dp"
-        android:paddingTop="5dp"
+        android:paddingTop="3dp"
         android:paddingEnd="0dp"
+        android:layoutAnimation="@anim/zoom_out_layout"
         tools:listitem="@layout/item_data_grid"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"/>

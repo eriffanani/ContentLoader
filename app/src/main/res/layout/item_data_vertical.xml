@@ -55,7 +55,8 @@
 
     </LinearLayout>
 
-    <com.erif.contentloader.ContentLoaderView
-        style="@style/Loader.Lines"/>
+    <com.erif.contentloader.LoaderView
+        style="@style/Loader.Lines"
+        android:color="@color/colorLine"/>
 
 </LinearLayout>

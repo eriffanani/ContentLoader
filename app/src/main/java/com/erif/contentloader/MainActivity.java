@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         onClick(R.id.btnVertical, ActivityVertical.class);
+        onClick(R.id.btnShimmer, ActivityShimmer.class);
         onClick(R.id.btnHorizontal, ActivityHorizontal.class);
         onClick(R.id.btnGrid, ActivityGrid.class);
         onClick(R.id.btnBanner, ActivityBanner.class);
         onClick(R.id.btnCombine, ActivityCombine.class);
-        onClick(R.id.btnShimmer, ActivityShimmer.class);
 
     }
 

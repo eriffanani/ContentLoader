@@ -17,14 +17,14 @@ implementation 'com.github.eriffanani:ContentLoader:1.2.0'
 
 ## How To Use
 ```xml
-<com.erif.contentloader.ContentLoaderFrameLayout
+<com.erif.contentloader.LoaderContainer
     android:id="@+id/content_loader"
     style="@style/ContentLoader.AutoStart">
   
-    <com.erif.contentloader.ContentLoaderView
+    <com.erif.contentloader.LoaderView
         style="@style/Loader.Square.Small"/>
   
-</com.erif.contentloader.ContentLoaderFrameLayout>
+</com.erif.contentloader.LoaderContainer>
 
 <YourContentView
     android:id="@+id/content_view"
@@ -54,7 +54,7 @@ loader.stopAndShowContent(contentView);
 
 ### ContentLoaderFrameLayout
 ```xml
-<com.erif.contentloader.ContentLoaderView
+<com.erif.contentloader.LoaderView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:autoStart="true"
@@ -64,7 +64,7 @@ loader.stopAndShowContent(contentView);
 ### ContentLoaderView
 * General
 ```xml
-<com.erif.contentloader.ContentLoaderView
+<com.erif.contentloader.LoaderView
     android:layout_width="100dp"
     android:layout_height="30dp"
     android:layout_margin="10dp"
@@ -77,7 +77,7 @@ loader.stopAndShowContent(contentView);
 
 * With Library Styles (Square, Rounded, Circle, Text)
 ```xml
-<com.erif.contentloader.ContentLoaderView
+<com.erif.contentloader.LoaderView
     styles="@style/Loader.Circle"/>
 ```
 #### Result
@@ -85,7 +85,7 @@ loader.stopAndShowContent(contentView);
 
 * Banner
 ```xml
-<com.erif.contentloader.ContentLoaderViewBanner
+<com.erif.contentloader.LoaderViewBanner
     android:layout_width="match_parent"
     android:layout_height="150dp"
     app:bannerPeep="leftAndRight"
@@ -106,7 +106,7 @@ loader.stopAndShowContent(contentView);
     android:orientation="horizontal"
     android:padding="10dp"
     android:gravity="center_vertical">
-    <com.erif.contentloader.ContentLoaderView
+    <com.erif.contentloader.LoaderView
         style="@style/Loader.Square.Small"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,9 +114,9 @@ loader.stopAndShowContent(contentView);
         android:orientation="vertical"
         android:gravity="center_vertical"
         android:layout_marginStart="10dp">
-        <com.erif.contentloader.ContentLoaderView
+        <com.erif.contentloader.LoaderView
             style="@style/Loader.Text"/>
-        <com.erif.contentloader.ContentLoaderView
+        <com.erif.contentloader.LoaderView
             style="@style/Loader.Text.Subtitle.Medium"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
@@ -136,7 +136,7 @@ loader.stopAndShowContent(contentView);
 ```
 * include content_loader.xml into your activity_main.xml
 ```xml
-<com.erif.contentloader.ContentLoaderFrameLayout
+<com.erif.contentloader.LoaderContainer
     android:id="@+id/content_loader"
     style="@style/ContentLoader.Match.AutoStart">
     <include layout="@layout/content_loader"/>

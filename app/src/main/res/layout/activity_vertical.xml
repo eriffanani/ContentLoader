@@ -6,19 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".example.ActivityVertical">
 
-    <com.erif.contentloader.ContentLoaderFrameLayout
+    <com.erif.contentloader.LoaderContainer
         android:id="@+id/content_loader_vertical"
         style="@style/ContentLoader">
 
         <include layout="@layout/content_loader_vertical"/>
 
-    </com.erif.contentloader.ContentLoaderFrameLayout>
+    </com.erif.contentloader.LoaderContainer>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/act_vertical_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="10"
+        android:layoutAnimation="@anim/fade_in_layout"
         tools:listitem="@layout/item_data_vertical"/>
 
 </RelativeLayout>

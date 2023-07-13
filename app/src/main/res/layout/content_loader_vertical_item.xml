@@ -15,7 +15,7 @@
         android:paddingBottom="12dp"
         android:gravity="center_vertical">
 
-        <com.erif.contentloader.ContentLoaderView
+        <com.erif.contentloader.LoaderView
             style="@style/Loader.Circle.Medium"/>
 
         <LinearLayout
@@ -25,10 +25,10 @@
             android:gravity="center_vertical"
             android:layout_marginStart="10dp">
 
-            <com.erif.contentloader.ContentLoaderView
+            <com.erif.contentloader.LoaderView
                 style="@style/Loader.Text"/>
 
-            <com.erif.contentloader.ContentLoaderView
+            <com.erif.contentloader.LoaderView
                 style="@style/Loader.Text.Subtitle.Medium"
                 android:layout_marginTop="10dp"/>
 
@@ -36,7 +36,7 @@
 
     </LinearLayout>
 
-    <com.erif.contentloader.ContentLoaderView
+    <com.erif.contentloader.LoaderView
         style="@style/Loader.Lines"/>
 
 </LinearLayout>

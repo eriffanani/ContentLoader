@@ -29,4 +29,7 @@
     <color name="colorOutline">#8C8D97</color>
     <color name="colorSurfaceVariant">#43444D</color>
     <color name="colorOnSurfaceVariant">#C0C1CB</color>
+
+    <color name="colorLine">#313137</color>
+
 </resources>

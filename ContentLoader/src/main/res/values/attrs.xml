@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="ContentLoaderFrameLayout">
+    <declare-styleable name="LoaderContainer">
         <attr name="android:autoStart"/>
         <attr name="android:duration"/>
         <attr name="loaderType" format="flags">
@@ -10,7 +10,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="ContentLoaderView">
+    <declare-styleable name="LoaderView">
         <attr name="viewShape" format="integer">
             <flag name="square" value="0"/>
             <flag name="rounded" value="1"/>
@@ -20,7 +20,7 @@
         <attr name="android:color"/>
     </declare-styleable>
 
-    <declare-styleable name="ContentLoaderViewBanner">
+    <declare-styleable name="LoaderViewBanner">
         <attr name="android:color"/>
         <attr name="bannerPeep" format="integer">
             <flag name="none" value="0"/>

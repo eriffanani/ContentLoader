@@ -30,6 +30,29 @@
         <item name="colorOutline">@color/colorOutline</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant</item>
+        <!--Status Bar-->
+        <item name="android:statusBarColor">@color/colorSecondaryContainer</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+        <!--Action Bar-->
+        <item name="actionBarStyle">@style/Theme.ActionBar</item>
+    </style>
+
+    <!--Action Bar Style-->
+    <style name="Theme.ActionBar" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">@color/colorSecondaryContainer</item>
+        <item name="titleTextAppearance">@style/Theme.ActionBar.Title</item>
+        <item name="titleTextStyle">@style/Theme.ActionBar.Title</item>
+        <item name="subtitleTextStyle">@style/Theme.ActionBar.Subtitle</item>
+    </style>
+    <!--Action Bar Title Style-->
+    <style name="Theme.ActionBar.Title" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">@color/colorOnPrimaryContainer</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="Theme.ActionBar.Subtitle" parent="TextAppearance.Material3.ActionBar.Subtitle">
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="Theme.ContentLoader.NoActionBar" parent="Theme.Material3.Dark.NoActionBar">

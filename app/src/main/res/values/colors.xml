@@ -30,4 +30,6 @@
     <color name="colorSurfaceVariant">#E1E2EC</color>
     <color name="colorOnSurfaceVariant">#45464F</color>
 
+    <color name="colorLine">#F2F2F2</color>
+
 </resources>

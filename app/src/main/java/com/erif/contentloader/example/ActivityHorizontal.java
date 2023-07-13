@@ -3,17 +3,16 @@ package com.erif.contentloader.example;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.erif.contentloader.ContentLoaderFrameLayout;
+import com.erif.contentloader.LoaderContainer;
 import com.erif.contentloader.R;
-import com.erif.contentloader.helper.AdapterHorizontal;
-import com.erif.contentloader.helper.DelayTimer;
+import com.erif.contentloader.helper.adapter.AdapterHorizontal;
+import com.erif.contentloader.helper.timer.Delay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,19 +30,19 @@ public class ActivityHorizontal extends AppCompatActivity {
             getSupportActionBar().setTitle("Horizontal Loader");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        Toast.makeText(this, "Loading simulation...", Toast.LENGTH_SHORT).show();
 
         RecyclerView recyclerView = findViewById(R.id.act_horizontal_recyclerView);
         setupList(recyclerView);
 
         LinearLayout content = findViewById(R.id.act_horizontal_contents);
 
-        ContentLoaderFrameLayout loader = findViewById(R.id.content_loader_horizontal);
+        LoaderContainer loader = findViewById(R.id.content_loader_horizontal);
         loader.startAndHideContent(content, true);
 
-        new DelayTimer(3, () -> {
+        new Delay(2.5, () -> {
+            recyclerView.scheduleLayoutAnimation();
             adapter.setList(list);
-            loader.stopAndShowContent(content, true);
+            new Delay(0.1, () -> loader.stopAndShowContent(content, true)).start();
         }).start();
 
     }

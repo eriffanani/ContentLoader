@@ -48,9 +48,12 @@
     <!--Action Bar Title Style-->
     <style name="Theme.ActionBar.Title" parent="TextAppearance.Material3.ActionBar.Title">
         <item name="android:textColor">@color/colorOnPrimaryContainer</item>
+        <item name="android:textSize">17sp</item>
     </style>
     <style name="Theme.ActionBar.Subtitle" parent="TextAppearance.Material3.ActionBar.Subtitle">
         <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="Theme.ContentLoader.NoActionBar" parent="Theme.Material3.Light.NoActionBar">

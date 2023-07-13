@@ -7,13 +7,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".example.ActivityHorizontal">
 
-    <com.erif.contentloader.ContentLoaderFrameLayout
+    <com.erif.contentloader.LoaderContainer
         android:id="@+id/content_loader_horizontal"
-        style="@style/ContentLoader">
+        style="@style/ContentLoader.Shimmer">
 
         <include layout="@layout/content_loader_horizontal"/>
 
-    </com.erif.contentloader.ContentLoaderFrameLayout>
+    </com.erif.contentloader.LoaderContainer>
 
     <LinearLayout
         android:id="@+id/act_horizontal_contents"
@@ -40,6 +40,8 @@
             android:clipToPadding="false"
             android:paddingStart="12dp"
             android:paddingEnd="0dp"
+            android:paddingBottom="5dp"
+            android:layoutAnimation="@anim/slide_left_layout"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_data_horizontal"/>

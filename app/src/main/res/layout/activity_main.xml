@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity"
+    android:paddingTop="30dp">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnVertical"
         style="@style/ButtonDefault"
         app:icon="@drawable/ic_vertical"
         android:text="Vertical List"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShimmer"
+        style="@style/ButtonMargin"
+        app:icon="@drawable/ic_shimmer"
+        android:text="Shimmer"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnHorizontal"
@@ -38,10 +46,5 @@
         app:icon="@drawable/ic_combined"
         android:text="Combined"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnShimmer"
-        style="@style/ButtonMargin"
-        app:icon="@drawable/ic_shimmer"
-        android:text="Shimmer"/>
 
 </LinearLayout>
