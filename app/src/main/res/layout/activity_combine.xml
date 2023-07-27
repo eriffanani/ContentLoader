@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".example.ActivityCombine">
+    tools:context="com.erif.contentloaderdemo.example.ActivityCombine">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 
                 <com.erif.contentloader.LoaderContainer
                     android:id="@+id/act_combined_loader"
-                    style="@style/ContentLoader"
+                    style="@style/LoaderContainer"
                     android:layout_height="175dp"
                     android:layout_marginTop="15dp">
 
@@ -117,7 +117,7 @@
 
                 <com.erif.contentloader.LoaderContainer
                     android:id="@+id/content_loader_horizontal"
-                    style="@style/ContentLoader.Shimmer">
+                    style="@style/LoaderContainer.Shimmer">
 
                     <include layout="@layout/content_loader_horizontal"/>
 
@@ -166,7 +166,7 @@
 
                 <com.erif.contentloader.LoaderContainer
                     android:id="@+id/act_combined_loader_vertical"
-                    style="@style/ContentLoader">
+                    style="@style/LoaderContainer">
 
                     <include layout="@layout/content_loader_vertical"/>
 
@@ -177,6 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:itemCount="10"
+                    android:nestedScrollingEnabled="false"
                     android:layoutAnimation="@anim/fade_in_layout"
                     tools:listitem="@layout/item_data_vertical"/>
 

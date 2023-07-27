@@ -1,12 +1,14 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
+
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.erif.contentloader"
+        applicationId "com.erif.contentloaderdemo"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -25,7 +27,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    namespace 'com.erif.contentloader'
+    namespace 'com.erif.contentloaderdemo'
 }
 
 dependencies {

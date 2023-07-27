@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".example.ActivityHorizontal">
+    tools:context="com.erif.contentloaderdemo.example.ActivityHorizontal">
 
     <com.erif.contentloader.LoaderContainer
         android:id="@+id/content_loader_horizontal"
-        style="@style/ContentLoader.Shimmer">
+        style="@style/LoaderContainer.Shimmer">
 
         <include layout="@layout/content_loader_horizontal"/>
 

@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".example.ActivityShimmer">
+    tools:context="com.erif.contentloaderdemo.example.ActivityShimmer">
 
     <com.erif.contentloader.LoaderContainer
         android:id="@+id/act_shimmer_contentLoader"
-        style="@style/ContentLoader.Shimmer">
+        style="@style/LoaderContainer.Shimmer">
 
         <include
             layout="@layout/content_loader_vertical"/>

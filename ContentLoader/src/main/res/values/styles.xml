@@ -13,19 +13,19 @@
         <item name="android:layout_height">@dimen/loader_line_height_large</item>
     </style>
 
-    <style name="ContentLoader">
+    <style name="LoaderContainer">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="loaderType">blink</item>
         <item name="android:autoStart">false</item>
     </style>
-    <style name="ContentLoader.AutoStart" parent="ContentLoader">
+    <style name="LoaderContainer.Auto" parent="LoaderContainer">
         <item name="android:autoStart">true</item>
     </style>
-    <style name="ContentLoader.Shimmer" parent="ContentLoader">
+    <style name="LoaderContainer.Shimmer" parent="LoaderContainer">
         <item name="loaderType">shimmer</item>
     </style>
-    <style name="ContentLoader.Shimmer.AutoStart" parent="ContentLoader.Shimmer">
+    <style name="LoaderContainer.Shimmer.Auto" parent="LoaderContainer.Shimmer">
         <item name="android:autoStart">true</item>
     </style>
 
