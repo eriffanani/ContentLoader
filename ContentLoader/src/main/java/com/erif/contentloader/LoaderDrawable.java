@@ -43,7 +43,7 @@ public class LoaderDrawable extends Drawable {
     }
 
     @Override
-    protected void onBoundsChange(Rect bounds) {
+    protected void onBoundsChange(@NonNull Rect bounds) {
         super.onBoundsChange(bounds);
         width = bounds.width();
         height = bounds.height();

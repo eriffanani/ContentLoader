@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.let {
-            it.title = "Content Loader Animation"
-            it.subtitle = "https://github.com/eriffanani/ContentLoader"
+        supportActionBar?.apply {
+            title = "Content Loader Animation"
+            subtitle = "https://github.com/eriffanani/ContentLoader"
         }
         onClick(R.id.btnVertical, ActivityVertical::class.java)
         onClick(R.id.btnShimmer, ActivityShimmer::class.java)

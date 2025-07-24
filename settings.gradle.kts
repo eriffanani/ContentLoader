@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -13,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ContentLoader"
-include ':app'
-include ':ContentLoader'
+include(":app")
+include(":ContentLoader")
